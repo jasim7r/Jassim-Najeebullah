@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jassim Najeebullah | AI/ML Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #e5e7eb;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease;
+        }
+        
+        .profile-photo-container {
+            width: 150px;
+            height: 180px; /* Slightly taller for rectangular shape */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin: 0 auto;
+            border-radius: 8px; /* Slightly rounded corners */
+        }
+        
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md transition-all duration-300 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-gray-800">Jassim<span class="text-blue-500">Najeebullah</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="font-semibold text-gray-800 hover:text-blue-500 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">About</a>
+                    <a href="#experience" class="font-semibold text-gray-800 hover:text-blue-500 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">Experience</a>
+                    <a href="#skills" class="font-semibold text-gray-800 hover:text-blue-500 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">Skills</a>
+                    <a href="#projects" class="font-semibold text-gray-800 hover:text-blue-500 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">Projects</a>
+                    <a href="#education" class="font-semibold text-gray-800 hover:text-blue-500 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">Education</a>
+                    <a href="#contact" class="font-semibold text-gray-800 hover:text-blue-500 relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <div class="w-6 flex flex-col space-y-1">
+                        <span class="h-0.5 w-full bg-gray-800"></span>
+                        <span class="h-0.5 w-full bg-gray-800"></span>
+                        <span class="h-0.5 w-full bg-gray-800"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gray-900 text-white bg-opacity-90" style="background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center;">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Profile Photo - Now Rectangular -->
+            <div class="flex justify-center mb-8">
+                <div class="profile-photo-container">
+                    <img src="E4E2C2BA-1B33-419F-A691-E7B50F30E187 copy_11zon.jpg" alt="Jassim Najeebullah" class="profile-photo">
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-400">Jassim Najeebullah</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">AI/ML Engineer | Data Science</p>
+            <a href="#contact" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-[-15px] after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="relative w-full md:w-1/2">
+                    <div class="profile-photo-container">
+                        <img src="E4E2C2BA-1B33-419F-A691-E7B50F30E187 copy_11zon.jpg" alt="Jassim Najeebullah" class="profile-photo">
+                    </div>
+                    <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-6 py-3 rounded shadow-lg">
+                        <h3 class="text-xl font-bold">Jassim Najeebullah</h3>
+                        <p class="text-sm">AI/ML Engineer</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <p class="text-gray-600 mb-4">Aspiring AI/ML Engineer with hands-on experience in building intelligent systems using Python, OpenCV, and NLP. Skilled in machine learning, deep learning, and REST API integrations, with a strong foundation in data structures, statistical analysis, and computer vision.</p>
+                    <p class="text-gray-600 mb-8">Experienced in applying AI solutions to real-world use cases such as virtual assistants, gesture recognition, and embedded systems. Adept at working with tools like TensorFlow, Scikit-learn, and HubSpot CRM.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p><span class="font-semibold text-gray-800">Email: </span>jasym7r@gmail.com</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p><span class="font-semibold text-gray-800">Location: </span>Bengaluru, India</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p><span class="font-semibold text-gray-800">Phone: </span>+91-7012707803</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p><span class="font-semibold text-gray-800">LinkedIn: </span>https://www.linkedin.com/in/jassim-najeebullah-99898b27a/</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-[-15px] after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500">Experience</h2>
+            <div class="timeline relative max-w-3xl mx-auto">
+                <div class="relative mb-12 pl-16">
+                    <div class="absolute top-0 left-0 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">Mar 2025 - Present</div>
+                    <div class="bg-white p-6 rounded-lg shadow-md relative before:content-[''] before:absolute before:top-6 before:-left-3 before:w-6 before:h-6 before:bg-white before:transform before:rotate-45 before:shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800">AI Intern</h3>
+                        <h4 class="text-blue-500 mb-2">UnleashTechWorx – Bangalore, India</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Developed and embedded AI tools into Python and HTML-based web interfaces, improving user interaction and functionality across internal tools</li>
+                            <li>Integrated REST APIs for seamless AI-backed workflows, reducing manual intervention by 30%</li>
+                            <li>Managed HubSpot CRM for over 100 companies and contacts, automating workflows that improved engagement tracking by 40%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative mb-12 pl-16">
+                    <div class="absolute top-0 left-0 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">Aug 2024 - Mar 2025</div>
+                    <div class="bg-white p-6 rounded-lg shadow-md relative before:content-[''] before:absolute before:top-6 before:-left-3 before:w-6 before:h-6 before:bg-white before:transform before:rotate-45 before:shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800">Data Analytics Intern</h3>
+                        <h4 class="text-blue-500 mb-2">Internship Studio – Pune, India</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Analyzed large datasets to extract actionable insights during 6-month Data Analytics Internship</li>
+                            <li>Developed data visualizations and reports using analytical tools, cleaning of data, enhancing decision-making processes and business understanding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-[-15px] after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Programming Languages</h3>
+                    <div class="mb-4">
+                        <p class="mb-1">Python</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="90%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-1">SQL</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="85%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-1">C#</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="75%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Frameworks & Libraries</h3>
+                    <div class="mb-4">
+                        <p class="mb-1">OpenCV</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="85%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-1">TensorFlow</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="80%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-1">Scikit-learn</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="85%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Data Tools & Others</h3>
+                    <div class="mb-4">
+                        <p class="mb-1">Jupyter Notebook</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="90%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-1">Power BI</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="80%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-1">HubSpot CRM</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar bg-blue-500 h-2.5 rounded-full" data-level="85%" style="width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-[-15px] after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Air Canvas/Virtual Paint" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Air Canvas/Virtual Paint</h3>
+                        <p class="text-gray-600 mb-4">2025</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600 mb-4">
+                            <li>AI-powered virtual canvas that detects hand gestures to draw in the air</li>
+                            <li>Used OpenCV, Python, and Media pipe for real-time tracking and drawing</li>
+                            <li>Enables gesture-based interaction without physical input devices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="AI Voice Assistant (JARVIS)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AI Voice Assistant (JARVIS)</h3>
+                        <p class="text-gray-600 mb-4">2025</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600 mb-4">
+                            <li>Personal AI assistant using Python, OpenCV, and NLP</li>
+                            <li>Integrated speech recognition and text-to-speech for real-time interaction</li>
+                            <li>Enabled task automation like searching, opening apps, and responding to queries</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Hand Sign Detection" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Hand Sign Detection</h3>
+                        <p class="text-gray-600 mb-4">2024</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600 mb-4">
+                            <li>American Sign Language (ASL) recognition using computer vision and ML</li>
+                            <li>Translates ASL gestures into text or speech</li>
+                            <li>Enhances communication between deaf and hearing individuals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-[-15px] after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500">Education</h2>
+            <div class="timeline relative max-w-3xl mx-auto">
+                <div class="relative mb-12 pl-16">
+                    <div class="absolute top-0 left-0 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">2021 – 2025</div>
+                    <div class="bg-white p-6 rounded-lg shadow-md relative before:content-[''] before:absolute before:top-6 before:-left-3 before:w-6 before:h-6 before:bg-white before:transform before:rotate-45 before:shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800">B.E in Artificial Intelligence & Machine Learning</h3>
+                        <h4 class="text-blue-500 mb-2">MVJ College of Engineering</h4>
+                        <p class="text-gray-600">CGPA: 7.85</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-[-15px] after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Service Hub Software Certification</h3>
+                    <p class="text-blue-500 mb-2">HubSpot</p>
+                    <p class="text-gray-600">May 2025</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">PHP and MySQL Training</h3>
+                    <p class="text-blue-500 mb-2">IIT Bombay</p>
+                    <p class="text-gray-600">Built a strong analytical foundation in PHP and MySQL</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Google Cloud Foundations</h3>
+                    <p class="text-blue-500 mb-2">Google GDSC</p>
+                    <p class="text-gray-600">Acquired hands-on experience with cloud computing skills</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Data Science and Analytics</h3>
+                    <p class="text-blue-500 mb-2">HP</p>
+                    <p class="text-gray-600">Building a solid foundation in data analysis and ML concepts</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">1 Million Prompters Program</h3>
+                    <p class="text-blue-500 mb-2">Dubai</p>
+                    <p class="text-gray-600">Enhancing expertise in prompt engineering and AI interactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-[-15px] after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500">Contact Me</h2>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-500 text-white p-3 rounded-full">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Email</h3>
+                            <p class="text-gray-600">jasym7r@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-500 text-white p-3 rounded-full">
+                            <i class="fas fa-phone text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Phone</h3>
+                            <p class="text-gray-600">+91-7012707803</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-500 text-white p-3 rounded-full">
+                            <i class="fas fa-map-marker-alt text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Location</h3>
+                            <p class="text-gray-600">Bengaluru, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <form id="contact-form" action="https://formspree.io/f/mwpqellg" method="POST" class="space-y-6">
+                        <div>
+                            <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <input type="text" name="subject" placeholder="Subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <textarea name="message" placeholder="Your Message" required rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.linkedin.com/in/jassim-najeebullah-99898b27a/" target="_blank" class="bg-gray-700 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/jasim7r" class="bg-gray-700 hover:bg-gray-900 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="bg-gray-700 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p>&copy; <span id="year"></span> Jassim Najeebullah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg', 'py-3');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.remove('shadow-lg', 'py-3');
+                    navbar.classList.add('py-4');
+                }
+            });
+            
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Animate skill bars when they come into view
+            const animateSkillBars = () => {
+                const skillBars = document.querySelectorAll('.skill-bar');
+                skillBars.forEach(bar => {
+                    const level = bar.getAttribute('data-level');
+                    bar.style.width = level;
+                });
+            };
+            
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.id === 'skills') {
+                            animateSkillBars();
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observe sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            const navLinks = document.querySelector('.md\\:flex');
+            
+            if (mobileMenuButton && navLinks) {
+                mobileMenuButton.addEventListener('click', function() {
+                    navLinks.classList.toggle('hidden');
+                    navLinks.classList.toggle('flex');
+                    navLinks.classList.toggle('flex-col');
+                    navLinks.classList.toggle('absolute');
+                    navLinks.classList.toggle('top-16');
+                    navLinks.classList.toggle('left-0');
+                    navLinks.classList.toggle('right-0');
+                    navLinks.classList.toggle('bg-white');
+                    navLinks.classList.toggle('p-4');
+                    navLinks.classList.toggle('space-y-4');
+                    navLinks.classList.toggle('space-x-8');
+                    navLinks.classList.toggle('shadow-md');
+                });
+            }
+            
+            // Form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+                    
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+                    submitButton.classList.add('opacity-75');
+                    
+                    fetch(this.action, {
+                        method: 'POST',
+                        body: new FormData(this),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            alert('Message sent successfully!');
+                            this.reset();
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
+                    })
+                    .catch(error => {
+                        alert('There was a problem sending your message. Please try again.');
+                        console.error('Error:', error);
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalText;
+                        submitButton.classList.remove('opacity-75');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
